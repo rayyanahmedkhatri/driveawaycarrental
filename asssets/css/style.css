@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: montserrat;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* ====================
+
+navbar
+
+==================== */
+
+
+nav {
+    width: 100%;
+    background: #e7e7e7;
+    color: #131010;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 10px 50px; */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: #080808;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Hamburger Button */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-btn div {
+    width: 25px;
+    height: 3px;
+    background: rgb(39, 35, 35);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    nav ul {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        background: #222;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+}
+
+/* ====================
+
+Welcome
+
+==================== */
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#home {
+    background: url('https://images.unsplash.com/photo-1502877338535-766e1452684a') center/cover;
+    height: 70vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ====================
+
+Cars
+
+==================== */
+
+#cars {
+    background: #f4f4f4;
+}
+
+.car {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cars-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+/* ====================
+
+contact
+
+==================== */
+#contact {
+    background: #fff;
+    text-align: center;
+}
+
+/* ====================
+
+whatsapp
+
+==================== */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: green;
+}
+
+
+
