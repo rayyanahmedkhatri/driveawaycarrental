@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us</title>
-  <script src="https://www.google.com/recaptcha/api.js?render=6Ldn1_krAAAAAA2jDBDogID_3BGio0aLtyqrcCz4"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render="></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="asssets/css/style.css">
   <link rel="stylesheet" href="asssets/css/contact.css">
@@ -76,7 +76,7 @@
       e.preventDefault();
 
       grecaptcha.ready(function () {
-        grecaptcha.execute('6Ldn1_krAAAAAA2jDBDogID_3BGio0aLtyqrcCz4', { action: 'submit' }).then(function (token) {
+        grecaptcha.execute('', { action: 'submit' }).then(function (token) {
           document.getElementById('token').value = token;
 
           const formData = new FormData(form);

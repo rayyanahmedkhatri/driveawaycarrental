@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $token    = $_POST['g-recaptcha-response'] ?? '';
 
     // reCAPTCHA verification
-    $secretKey = '6Ldn1_krAAAAALE_G7fW5YsDRAUYKjD9snfKS2J7'; // SECRET KEY
+    $secretKey = ''; // SECRET KEY
     $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$token}");
     $captchaSuccess = json_decode($verify);
 
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host       = 'driveawaycarrental.ae'; // Your mail host
         $mail->SMTPAuth   = true;
         $mail->Username   = 'sendmail@driveawaycarrental.ae'; 
-        $mail->Password   = 'sendmail@1234';
+        $mail->Password   = '';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
